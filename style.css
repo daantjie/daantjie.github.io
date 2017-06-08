@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css?family=Vollkorn:400,400i,700');
+
+p {
+    font-family: 'Vollkorn', serif;
+    font-size: 15pt;
+}
+
+div {
+    font-family: 'Vollkorn', serif;
+    font-size: 15pt;
+}
+
+/* Screens hurt the eyes; so the colour should be one which eases this pain.*/
+body {
+    background-color: #f9f4e0;
+    padding-left: 26%;
+    padding-right: 41%;
+}
+
+/* Used only for the title -- perhaps it would be better to use a ‘span’ with an
+   id, but I don't know how well that would work with Pollen -- I might have to
+   create some more txexpr utilities. */
+h1 {
+    font-family: 'Vollkorn', serif;
+    font-size: 25px;
+    font-style: bold;
+    font-kerning: normal;
+}
+
+.quotation {
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+}
+
+.sidenote, .marginnote {
+    float: right;
+    clear: right;
+    margin-right: -60%;
+    width: 50%;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 13pt;/*1.1rem;*/
+    line-height: 1.3;
+    vertical-align: baseline;
+    position: relative;
+}
