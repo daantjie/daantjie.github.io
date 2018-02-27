@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<!-- Generated automatically by Pollen. -->
+<html>
+  <head>
+    <title>The principle of least lift</title>
+    <link rel="stylesheet" text="text/css" href="style.css">
+  </head>
+
+  <body>
+    <root><h1>The principle of least lift</h1><p><i>Lessons learnt from prototyping in Haskell</i></p><p><em>Always separate effectful code from pure code.</em> I suggest we expand this advice to all <em>lifted</em> types – like <code style="font-size: 16px;">MachineT</code>, for example.</p><p>I was prototyping a monitoring interface for some builds. It needed (1) to trawl through a directory full of log files, parsing names and contents for information about the build, and (2) display that information in the form of a webpage.</p><p>My mistake was to place too much of my code in the <code style="font-size: 16px;">MachineT</code> monad. I spent a lot of time trying to figure out how to compose all my component <code style="font-size: 16px;">MachineT</code>s – splitting input, combining output, etc. etc.</p><p>What I forgot is that I only needed to use machines if I need to do effectful streaming in constant memory – streaming from a file, for instance. Even effectful computations needn’t be lifted into a machine; the Kleisli arrow would work better.</p><p><code style="font-size: 16px;">(&lt;=&lt;) :: Monad m =&gt; (b -&gt; m c) -&gt; (a -&gt; m b) -&gt; a -&gt; m c</code></p><p>Now that I put as much of my code in <em>pure</em> functions, splitting and recombining input is a piece of cake – I can even throw in the arrow combinators, <code style="font-size: 16px;">&gt;&gt;&gt;</code>, @</p></root>
+  </body>
+</html>

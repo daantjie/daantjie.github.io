@@ -27,9 +27,21 @@ h1 {
     font-kerning: normal;
 }
 
+h2 {
+    font-family: 'Vollkorn', serif;
+    font-size: 20px;
+    font-style: bold;
+    font-kerning: normal;
+}
+
 .quotation {
     border-top: 1px solid gray;
     border-bottom: 1px solid gray;
+    display: block;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
 }
 
 .sidenote, .marginnote {
