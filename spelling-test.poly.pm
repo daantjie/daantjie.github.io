@@ -8,7 +8,7 @@ It is sweltering when it snows.
 
 Our paintings were left to rot.
 
-It is very communist to share our cloths.
+It is very communist to share our toys.
 
 Water can turn into urine.
 
